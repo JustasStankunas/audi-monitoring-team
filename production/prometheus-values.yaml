@@ -1,0 +1,14 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: prometheus
+  namespace: monitoring
+spec:
+  chart:
+    spec:
+      version: ">=70.4.2"
+  values:
+    namespaceOverride: "monitoring"
+    commonLabels:
+      - audi.team: "monitoring-team"
+      - audi.stage: "production"
