@@ -1,0 +1,33 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+  name: pager
+  namespace: monitoring
+spec:
+  type: pagerduty
+  address: https://events.pagerduty.com
+  channel: R03EBGJ3JRVTANZ14R75AUSFLSI8KABD
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: on-call-webapp-pager
+  namespace: monitoring
+spec:
+  summary: "cluster addons"
+  eventMetadata:
+    cluster: "my-cluster"
+    region: "us-east-2"
+  providerRef:
+    name: pager
+  eventSeverity: error
+  eventSources:
+    - kind: HelmRelease
+      name: '*'
+    - kind: HelmRepository
+      name: '*'
+    - kind: GitRepository
+      name: '*'
+    - kind: Kustomization
+      name: '*'
+---

@@ -3,3 +3,5 @@ kind: Kustomization
 resources:
   - podinfo-repository.yaml
   - podinfo-release.yaml
+  - alerts-rocket.yaml
+  - alerts-pager.yaml

@@ -4,3 +4,5 @@ resources:
   - ../base
 patchesStrategicMerge:
   - podinfo-values.yaml
+  - alerts-pager-alert-values.yaml
+  - alerts-rocket-alert-values.yaml

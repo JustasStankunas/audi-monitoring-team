@@ -12,3 +12,37 @@ spec:
     commonLabels:
       - audi.team: "monitoring-team"
       - audi.stage: "staging"
+# crds:
+#   enabled: true
+# alertmanager:
+#   enabled: true
+#   alertmanagerSpec:
+#     resources: {}
+#     # requests:
+#     #   memory: 400Mi
+# grafana:
+#   resources: {}
+# # limits:
+# #   cpu: 200m
+# #   memory: 200Mi
+# # requests:
+# #   cpu: 100m
+# #   memory: 100Mi
+# ## Manages Prometheus and Alertmanager components
+# ##
+# prometheusOperator:
+#   enabled: true
+#     deployment:
+#       enabled: false
+#       ## Resource limits & requests
+#       ##
+#       resources: {}
+#       # limits:
+#       #   cpu: 200m
+#       #   memory: 200Mi
+#       # requests:
+#       #   cpu: 100m
+#       #   memory: 100Mi
+#     patch:
+#       enabled: true
+#       resources: {}
