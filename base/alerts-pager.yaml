@@ -6,7 +6,7 @@ metadata:
 spec:
   type: pagerduty
   address: https://events.pagerduty.com
-  channel: R03EBGJ3JRVTANZ14R75AUSFLSI8KABD
+  channel: R03ECDJIHTJK2Q1KFCERJF9ATFR9F9BC
 ---
 apiVersion: notification.toolkit.fluxcd.io/v1beta3
 kind: Alert
